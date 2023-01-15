@@ -39,6 +39,6 @@ public class ItemInfoUpdate : MonoBehaviour
     public void ClosePanel()
     {
        
-        infoPanel.SetActive(false);
+        infoPanel.SetActive(true);
     }
 }

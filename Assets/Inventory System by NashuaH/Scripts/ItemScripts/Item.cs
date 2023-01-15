@@ -18,6 +18,9 @@ public class Item : ScriptableObject
 
     // The UI icon of the item 
     public Sprite itemIcon;
+
+    // Reinforced value
+    public int reinforce;
     
     public virtual void Use()
     {

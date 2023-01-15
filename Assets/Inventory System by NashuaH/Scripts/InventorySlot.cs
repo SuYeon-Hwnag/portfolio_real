@@ -19,6 +19,8 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     // The remove Button is where the player clicks to remove the item in this slot
     public Button removeButton;
 
+    // The reinforce button is gfhgjhj 여기 수정함
+    public Button reinforce_button;
 
     // The following function is called everytime an item is added or removed from the inventory
     public void UpdateSlot(Item itemInSlot, int quantityInSlot)
@@ -92,5 +94,15 @@ public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         // Removes item from the Inventory Script and consequently updates the UI(This occurs inside of RemoveItem())
         // Currently removing one piece on stackable objects
         Inventory.instance.RemoveItem(Inventory.instance.itemList[Inventory.instance.itemList.IndexOf(item)], 1);
+    }
+
+
+    private void Start()
+    {
+        reinforce_button.onClick.AddListener(reinforce);
+    }
+    void reinforce()
+    {
+        Debug.Log("누름");
     }
 }
