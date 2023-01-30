@@ -9,6 +9,8 @@ public class Monster : MonoBehaviour
     public int Hp_Now;
     public int attacked_damage;
 
+    public float collision_radius = 10.0f; // 충돌범위
+
     private void SetEnermy(string _enermy_name, int _Hp_Max, int _Hp_Now, int _attacked_damage)
     {
         enermy_name = _enermy_name;
